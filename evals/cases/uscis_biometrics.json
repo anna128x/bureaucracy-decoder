@@ -1,0 +1,10 @@
+{
+  "id": "uscis_biometrics",
+  "letter_text": "U.S. Citizenship and Immigration Services\nI-797C, Notice of Action\nASC APPOINTMENT NOTICE\nAPPLICANT: MARIA GARCIA\n\nYou are required to appear for biometrics (fingerprints and photo) at the Application Support Center listed below.\n\nDATE AND TIME OF APPOINTMENT: 02/20/2026 at 10:00 AM\nLOCATION: 1234 Federal Plaza, Suite 100, Los Angeles, CA 90012\n\nWHAT TO BRING: This appointment notice AND a valid photo identification (passport, driver's license, or state ID).\n\nIf you fail to appear, your application may be considered abandoned and may be denied. If you must reschedule, follow the instructions on the back of this notice before your appointment date.",
+  "expected": {
+    "category_keywords": ["uscis", "immigration", "biometrics", "notice", "appointment"],
+    "expects_deadline": true,
+    "expected_date_substr": "02/20/2026",
+    "key_action_keywords": ["appear", "bring", "photo id", "identification", "appointment"]
+  }
+}

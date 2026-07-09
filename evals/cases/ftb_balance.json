@@ -1,0 +1,10 @@
+{
+  "id": "ftb_balance",
+  "letter_text": "State of California\nFranchise Tax Board\nNotice of Tax Return Change - Balance Due\nTaxable Year 2024\n\nWe changed your California income tax return because of a math error in the amount of tax withheld. As a result, you have a balance due.\n\nBalance due: $312.45\nPay by: February 28, 2026\n\nTo avoid additional penalties and interest, pay the amount due by the date above. You can pay online at ftb.ca.gov, by mail using the enclosed voucher, or by phone. If you believe this change is wrong, call the number on this notice.",
+  "expected": {
+    "category_keywords": ["tax", "ftb", "franchise tax"],
+    "expects_deadline": true,
+    "expected_date_substr": "February 28, 2026",
+    "key_action_keywords": ["pay", "online", "ftb.ca.gov", "voucher", "call"]
+  }
+}

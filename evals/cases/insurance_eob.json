@@ -1,0 +1,10 @@
+{
+  "id": "insurance_eob",
+  "letter_text": "HealthFirst Insurance\nEXPLANATION OF BENEFITS\nTHIS IS NOT A BILL\nMember: ANNA KOVAL\nClaim #: 987654321\n\nProvider: Riverside Medical Group\nDate of service: 12/05/2025\n\nAmount billed: $450.00\nPlan discount: -$180.00\nAmount plan paid: $216.00\nYour responsibility (copay/coinsurance): $54.00\n\nThis document explains how your claim was processed. It is not a bill. Your provider may send you a separate bill for the amount shown as 'your responsibility.' If you think this claim was processed incorrectly, you may file an appeal within 180 days of this notice.",
+  "expected": {
+    "_note": "The 180-day appeal window is a real but relative deadline, so we assert its presence, not an exact date.",
+    "category_keywords": ["insurance", "eob", "explanation of benefits", "medical"],
+    "expects_deadline": true,
+    "key_action_keywords": ["not a bill", "appeal", "responsibility", "provider bill"]
+  }
+}

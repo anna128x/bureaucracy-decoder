@@ -1,0 +1,9 @@
+{
+  "id": "uscis_receipt",
+  "letter_text": "U.S. Citizenship and Immigration Services\nI-797C, Notice of Action\nRECEIPT NUMBER: MSC0000000000\nCASE TYPE: I-765, Application for Employment Authorization\nRECEIVED DATE: 01/12/2026\nNOTICE DATE: 01/15/2026\nAPPLICANT: IVAN PETROV\n\nThis notice confirms that we received your application. It does not grant any benefit or employment authorization. Please keep this notice for your records. You can check your case status online at egov.uscis.gov using the receipt number above. Processing times vary by office. Do not contact us about your case unless you have not received a decision after the posted processing time.",
+  "expected": {
+    "category_keywords": ["uscis", "immigration", "notice"],
+    "expects_deadline": false,
+    "key_action_keywords": ["case status", "receipt number", "online", "egov", "keep"]
+  }
+}

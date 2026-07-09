@@ -1,0 +1,10 @@
+{
+  "id": "ssa_award",
+  "letter_text": "Social Security Administration\nNotice of Award\nClaimant: ELENA SOKOLOVA\n\nWe are writing to tell you that you are entitled to monthly retirement benefits. Your first payment will be for February 2026 and will be deposited to your bank account on file.\n\nMonthly benefit amount: $1,540.00\n\nIf any of the information we used is wrong, or if your situation changes (for example, you move or change banks), you must tell us. You have the right to appeal if you disagree with any part of this decision; if you want to appeal, you must do so in writing within 60 days of the date you receive this notice.",
+  "expected": {
+    "category_keywords": ["social security", "ssa", "award", "benefits"],
+    "expects_deadline": true,
+    "expected_date_substr": "60 days",
+    "key_action_keywords": ["appeal", "report changes", "tell us", "writing"]
+  }
+}

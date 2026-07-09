@@ -1,0 +1,19 @@
+# Render.com blueprint. Push to GitHub, then in Render: New > Blueprint,
+# point it at this repo, and set ANTHROPIC_API_KEY as a secret env var.
+# (Hugging Face Spaces is the free-forever alternative — see RUNBOOK.md.)
+services:
+  - type: web
+    name: bureaucracy-decoder
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false          # set manually in the Render dashboard (secret)
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-4-8
+      - key: MAX_INPUT_CHARS
+        value: "12000"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "6"

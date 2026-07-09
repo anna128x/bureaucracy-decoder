@@ -1,0 +1,10 @@
+{
+  "id": "jury_summons",
+  "letter_text": "Superior Court of California, County of Alameda\nJURY SUMMONS\nJuror ID: 44551122\nName: DMITRI VOLKOV\n\nYou are summoned for jury service. You must complete the online questionnaire and confirm your availability.\n\nReport date: You are on call for the week of February 9, 2026. Call the jury line or check online after 5:00 PM the business day before your report date to learn if you must appear.\n\nComplete the eligibility questionnaire within 5 days of receiving this summons. Failure to respond to a jury summons may result in penalties. If you need to postpone, request a one-time postponement online.",
+  "expected": {
+    "category_keywords": ["jury", "summons", "court"],
+    "expects_deadline": true,
+    "expected_date_substr": "February 9, 2026",
+    "key_action_keywords": ["questionnaire", "online", "call", "postpone", "respond"]
+  }
+}

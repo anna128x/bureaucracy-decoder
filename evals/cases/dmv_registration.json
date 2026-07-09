@@ -1,0 +1,10 @@
+{
+  "id": "dmv_registration",
+  "letter_text": "California Department of Motor Vehicles\nVEHICLE REGISTRATION RENEWAL NOTICE\nVehicle: 2018 TOYOTA COROLLA\nPlate: 8ABC123\nRegistration expires: 03/31/2026\n\nAmount due: $215.00\n\nRenew before your registration expires to avoid late penalties. You can renew online at dmv.ca.gov, by mail, or at a DMV office. Note: this vehicle requires a smog certification before renewal. Have your smog check completed at a licensed station, then renew.",
+  "expected": {
+    "category_keywords": ["dmv", "motor vehicles", "registration"],
+    "expects_deadline": true,
+    "expected_date_substr": "03/31/2026",
+    "key_action_keywords": ["renew", "online", "dmv.ca.gov", "smog", "pay"]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "irs_cp2000",
+  "letter_text": "Department of the Treasury\nInternal Revenue Service\nNotice CP2000\nTax Year 2024\n\nProposed changes to your 2024 Form 1040.\n\nThe income or payment information we received from third parties (such as employers or banks) does not match the information you reported on your tax return. Because of this, we propose a change that would increase the tax you owe by $1,842.00, plus interest.\n\nThis is NOT a bill. If you agree with the changes, sign the enclosed Response form and return it. If you disagree, complete the Response form explaining why and include supporting documents.\n\nRespond by March 3, 2026. If we do not hear from you by that date, we will send you a Statutory Notice of Deficiency.",
+  "expected": {
+    "category_keywords": ["tax", "irs"],
+    "expects_deadline": true,
+    "expected_date_substr": "March 3, 2026",
+    "key_action_keywords": ["respond", "response form", "agree", "disagree", "sign"]
+  }
+}

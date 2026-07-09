@@ -1,0 +1,10 @@
+{
+  "id": "uscis_rfe",
+  "letter_text": "U.S. Citizenship and Immigration Services\nREQUEST FOR EVIDENCE (RFE)\nCASE TYPE: I-130, Petition for Alien Relative\nPETITIONER: JOHN SMITH\n\nWe need more evidence to continue processing your case. To complete our review, submit the following:\n1. Proof of the bona fide marriage (joint bank statements, lease, photos together over time).\n2. A copy of the petitioner's birth certificate with certified English translation.\n\nYOU MUST SUBMIT THE REQUESTED EVIDENCE SO THAT IT IS RECEIVED BY: April 30, 2026.\n\nIf we do not receive a response by that date, we may deny your case based on the current record. Include a copy of this entire notice on top of your response and mail it to the address shown.",
+  "expected": {
+    "category_keywords": ["uscis", "immigration", "request for evidence", "rfe"],
+    "expects_deadline": true,
+    "expected_date_substr": "April 30, 2026",
+    "key_action_keywords": ["submit", "evidence", "mail", "response", "documents"]
+  }
+}

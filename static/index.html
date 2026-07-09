@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bureaucracy Decoder</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Bureaucracy Decoder</h1>
+      <p class="tagline">
+        Paste an official US letter — a USCIS notice, an IRS/state tax letter, an
+        insurance EOB — and get back, in plain English and Russian: what it means,
+        what deadline applies, and what to do next.
+      </p>
+    </header>
+
+    <section class="input-card">
+      <label for="letter">Paste the letter text</label>
+      <textarea id="letter" rows="10"
+        placeholder="Paste the words from your letter here. Your text is not saved."></textarea>
+      <div class="row">
+        <button id="decode" type="button">Decode</button>
+        <span id="status" class="status" role="status" aria-live="polite"></span>
+      </div>
+      <p class="privacy">🔒 Your letter text is not stored or logged. It is used only to
+        produce the explanation below.</p>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite"></section>
+
+    <footer>
+      <p class="disclaimer">
+        <strong>Informational only — not legal, tax, or medical advice.</strong>
+        Always verify against your original document and, when in doubt, consult a
+        professional or the agency that sent the letter.
+      </p>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
