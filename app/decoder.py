@@ -11,11 +11,12 @@ Model note: default is ``claude-opus-4-8`` (highest quality). Set ANTHROPIC_MODE
 
 from __future__ import annotations
 
+import base64
 import os
 
 import anthropic
 
-from app.prompts import SYSTEM_PROMPT, build_user_content
+from app.prompts import SYSTEM_PROMPT, build_file_content, build_user_content
 from app.schema import DecodeResult
 
 DEFAULT_MODEL = "claude-opus-4-8"
@@ -27,8 +28,8 @@ def _client() -> anthropic.Anthropic:
     return anthropic.Anthropic()
 
 
-def decode_letter(letter_text: str, *, client: anthropic.Anthropic | None = None) -> DecodeResult:
-    """Decode one letter's text into a structured, bilingual explanation.
+def _parse(content: list[dict], *, client: anthropic.Anthropic | None = None) -> DecodeResult:
+    """Run the single structured Claude call for whatever user content we built.
 
     Raises anthropic.APIError subclasses on API failure; callers handle those.
     """
@@ -39,7 +40,7 @@ def decode_letter(letter_text: str, *, client: anthropic.Anthropic | None = None
         model=model,
         max_tokens=MAX_TOKENS,
         system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": build_user_content(letter_text)}],
+        messages=[{"role": "user", "content": content}],
         output_format=DecodeResult,
     )
 
@@ -48,3 +49,20 @@ def decode_letter(letter_text: str, *, client: anthropic.Anthropic | None = None
         # Model refused or output could not be parsed to the schema.
         raise ValueError("Could not decode this letter into the expected format.")
     return result
+
+
+def decode_letter(letter_text: str, *, client: anthropic.Anthropic | None = None) -> DecodeResult:
+    """Decode one letter's pasted text into a structured, bilingual explanation."""
+    return _parse(build_user_content(letter_text), client=client)
+
+
+def decode_document(
+    data: bytes, media_type: str, *, client: anthropic.Anthropic | None = None
+) -> DecodeResult:
+    """Decode one letter uploaded as a PDF or photo/scan.
+
+    Claude reads the text out of the document itself — no OCR step. ``media_type`` must
+    be one of the types ``build_file_content`` accepts, or it raises ValueError.
+    """
+    data_b64 = base64.standard_b64encode(data).decode("ascii")
+    return _parse(build_file_content(data_b64, media_type), client=client)

@@ -21,12 +21,28 @@
       <label for="letter">Paste the letter text</label>
       <textarea id="letter" rows="10"
         placeholder="Paste the words from your letter here. Your text is not saved."></textarea>
+
+      <div class="or-divider"><span>or upload a PDF or photo</span></div>
+
+      <div id="dropzone" class="dropzone" tabindex="0" role="button"
+        aria-label="Upload a PDF or photo of the letter">
+        <input id="file-input" type="file" class="visually-hidden"
+          accept="application/pdf,image/png,image/jpeg,image/gif,image/webp" />
+        <p class="dz-hint">📎 Drag a PDF or photo here, or <span class="dz-link">click to choose a file</span>.</p>
+      </div>
+
+      <div id="file-preview" class="file-preview hidden">
+        <img id="file-thumb" class="file-thumb hidden" alt="Selected letter preview" />
+        <span id="file-name" class="file-name"></span>
+        <button id="file-remove" type="button" class="file-remove" aria-label="Remove file">✕</button>
+      </div>
+
       <div class="row">
         <button id="decode" type="button">Decode</button>
         <span id="status" class="status" role="status" aria-live="polite"></span>
       </div>
-      <p class="privacy">🔒 Your letter text is not stored or logged. It is used only to
-        produce the explanation below.</p>
+      <p class="privacy">🔒 Your letter — whether pasted text or an uploaded file — is not
+        stored or logged. It is used only to produce the explanation below.</p>
     </section>
 
     <section id="result" class="result hidden" aria-live="polite"></section>

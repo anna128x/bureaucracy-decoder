@@ -58,6 +58,49 @@ textarea {
   border-radius: 8px;
 }
 
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.or-divider {
+  display: flex; align-items: center; gap: .75rem;
+  margin: 1rem 0; color: var(--muted); font-size: .85rem;
+}
+.or-divider::before, .or-divider::after {
+  content: ""; flex: 1; height: 1px; background: var(--line);
+}
+
+.dropzone {
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.dropzone:hover, .dropzone:focus-visible { border-color: var(--accent); outline: none; }
+.dropzone.dragover { border-color: var(--accent); background: var(--bg); }
+.dz-hint { margin: 0; font-size: .95rem; }
+.dz-link { color: var(--accent); font-weight: 600; }
+
+.file-preview {
+  display: flex; align-items: center; gap: .75rem;
+  margin-top: .85rem; padding: .6rem .75rem;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
+}
+.file-thumb {
+  width: 48px; height: 48px; object-fit: cover;
+  border-radius: 6px; border: 1px solid var(--line); max-width: 100%;
+}
+.file-name { flex: 1; font-size: .92rem; word-break: break-all; }
+.file-remove {
+  background: transparent; color: var(--muted); border: 1px solid var(--line);
+  border-radius: 6px; padding: .2rem .5rem; font-weight: 700; cursor: pointer;
+}
+.file-remove:hover { color: var(--hi-high); border-color: var(--hi-high); }
+
 .row { display: flex; align-items: center; gap: 1rem; margin-top: .75rem; }
 
 button {
