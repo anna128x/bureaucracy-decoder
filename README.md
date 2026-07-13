@@ -3,7 +3,7 @@
 **Paste the text of a confusing US government or insurance letter — get back, in plain
 English and Russian, what it means, what deadline applies, and what to do next.**
 
-> _Live demo: (add your deployed URL here)_
+> _Live demo: https://bureaucracy-decoder.onrender.com/_
 
 A USCIS notice, an IRS or state tax letter, an insurance Explanation of Benefits — these
 arrive in dense officialese, often to people who are still learning English. This tool

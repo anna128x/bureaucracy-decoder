@@ -12,7 +12,7 @@ services:
       - key: ANTHROPIC_API_KEY
         sync: false          # set manually in the Render dashboard (secret)
       - key: ANTHROPIC_MODEL
-        value: claude-opus-4-8
+        value: claude-sonnet-5
       - key: MAX_INPUT_CHARS
         value: "12000"
       - key: RATE_LIMIT_PER_MINUTE
